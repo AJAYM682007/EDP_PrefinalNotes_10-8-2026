@@ -1,7 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 
-function App() {
+function Home() {
   const myname = "AJ Megriño";
   const myintro = "This is my first React project"
   const [myvalue, setMyvalue] = useState(0)
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

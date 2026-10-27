@@ -1,15 +1,18 @@
 import './App.css';
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
+function Login() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const navigate = useNavigate();
   const buttonclick = ()=> {
     if(username === actualusername && password === actualpassword) {
       alert("Logged in successfully")
+      navigate("/home")
+    } else {
+      alert("Wrong credentials")
     }
-    console.log(username, password)
-
     // My Solution
     // if(username != actualusername && password != actualpassword) {
     //   console.log(username, password)
@@ -35,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
